@@ -64,7 +64,7 @@ function precomputeStyle(style: ?Object, validAttributes: Object): ?Object {
 }
 
 function _processor(key: string, validAttributes: Object) {
-  var process = validAttributes[key] && validAttributes[key].process;
+  var process = validAttributes && validAttributes[key] && validAttributes[key].process;
   if (!process) {
     process =
       ReactNativeStyleAttributes[key] &&
